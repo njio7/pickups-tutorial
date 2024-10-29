@@ -44,5 +44,5 @@ changing these will stop the code from working.
 to test if the cube moves left and right, press the play button at thte top of the Scene and wait for it to load. once it does, press A/D or the left/right arrow keys. the cube should move.
 if it does not, make sure to double check the inspector and the code for any erros or spelling mistakes.
 
-once the cube moves, we can then work on getting the coins to dissapear when the cube interacts with it.
-in order to do this, open your Coin script and 
+once the cube is able to move, we can then work on getting the coins to dissapear when the cube interacts with it because currently, you should be able to see the cube go through the coins and not do anything.
+if anything strage is happening 
