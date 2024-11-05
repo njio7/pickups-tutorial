@@ -1,6 +1,6 @@
 # pickups tutorial
 
-from the GameObject tab at the to pof the screen, create a cube, plane and a cylinder.
+from the GameObject tab at the top of the screen, create a cube, plane and a cylinder.
  ![image](https://github.com/user-attachments/assets/1e61a4b6-e2bb-46f7-b6f1-c11820de13cf)
 
 make sure to rename the cylinder to "coin" so it's easier to identify in the hierachy.
@@ -73,7 +73,19 @@ the function bellow allows us to create an instance that will act on it's own se
 inside our new functtion, you can put:
 
 ![image](https://github.com/user-attachments/assets/d113a379-f4ea-46f5-882e-89be7108742f)
-which will check every frame for an interaction from the tag "Player"
+
+which will check for objects that pass through it with the "Player" tag on them. if an object touches thhe coin that does not have the "Player" tag, it will not interact with the coin and nothing will happen.
+
+after this we are now able to make the coin vanish if we use:
+
+![image](https://github.com/user-attachments/assets/3a075668-3828-4467-926b-ea3fe2a21af9)
+
+which simply destroys the coin from the scene and provides the visual confirmation of collecting the coin. "destroy" meaning it get's deleted from the scene entirely.
 
 
+
+
+
+
+to go a bit further with this and confirm that the coin are being collected
 
