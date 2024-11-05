@@ -55,6 +55,10 @@ next, we need to give the cube a rigid body so it can interact with the coins. f
 to test if things are working as intended, you can press play on the scene and move the cube into the coins. if it colides with the coins and doesn't go through, you may have forgotten to enable "Is Trigger" in the coin's Sphere Collider.
 if the cube passes through the coins then things should be working correctly.
 
+one last step before moving on is that you should make sure that the cube has the "Player" tag in the inspector as this will make referencing it in the unity engine a lot easier.
+![image](https://github.com/user-attachments/assets/e338ca3a-17ff-4816-b980-96ddb3c02bf6)
+
+
 
 
 now we can work on getting the coins to detect when the cube has touched them. it is imprtant that one of our two objects have a rigidbody so that they can interact with eachother, but our cube already has one which makes things easier.
@@ -65,6 +69,9 @@ in this script, we will be creating an "OnTrigger" function that will check for 
 the function bellow allows us to create an instance that will act on it's own seperately from "void start" and "void update".
 ![image](https://github.com/user-attachments/assets/30807305-e3e4-4200-bd86-c68d36f41936)
 
+inside our new functtion, you can put:
+![image](https://github.com/user-attachments/assets/d113a379-f4ea-46f5-882e-89be7108742f)
+which will check every frame for an interaction from the tag "Player"
 
 
 
