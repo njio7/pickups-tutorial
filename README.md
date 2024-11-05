@@ -49,7 +49,7 @@ if it does not, make sure to double check the inspector and the code for any err
 once the cube is able to move, we can then work on getting the coins to dissapear when the cube interacts with it because currently, you should be able to see the cube go through the coins and not do anything.
 if anything strage is happening, try going through the code again to make sure things work.
 
-next, we need to give the cube a rigid body so it can interact with the coins. for this example, you will most likely want to disable "Use Gravity" as it may cause the cube to be influenced by fricttion as it moves along the plane.
+next, we need to give the cube a rigid body so it can interact with the coins. for this example, you will most likely want to disable "Use Gravity" as it may cause the cube to be influenced by friction as it moves along the plane.
 ![image](https://github.com/user-attachments/assets/e23a9307-6b20-4ff5-9b0f-4686a5964686)
 
 to test if things are working as intended, you can press play on the scene and move the cube into the coins. if it colides with the coins and doesn't go through, you may have forgotten to enable "Is Trigger" in the coin's Sphere Collider.
@@ -84,8 +84,7 @@ which simply destroys the coin from the scene and provides the visual confirmati
 
 
 
+the last step in the tutorial is to have some way to visually represent the ammount of coins collected. this can be done in unity's debug console while the game is running.
 
-
-
-to go a bit further with this and confirm that the coin are being collected
+to do this, we will first 
 
