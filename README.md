@@ -36,8 +36,10 @@ after that, drag your Coin script onto your coin and your Player script onto the
 for the player code, we're going to use this code down below:
 ![image](https://github.com/user-attachments/assets/ecacdd75-d68e-4278-a61f-9f128795ea6e)
 
-this will allow you to move the cube left and right, along the X axis, using the arrow keys or A/D.
-the line "UnityEngine.Input.GetAxis("Horizontal")" makes use of the default unity inputs and movment axis  that are located in Edit (top right in the window) > Project Settings... > Input Manager.
+the goal for this tutorial is to understand how to create pickups and have the player interact with them, which is why i will only be giving a brief explanation of what it does below:
+
+this code will allow you to move the cube left and right, along the X axis, using the arrow keys or A/D.
+the line "UnityEngine.Input.GetAxis("Horizontal")" makes use of the default unity inputs and movment axis that are located in Edit (top right in the window) > Project Settings... > Input Manager.
 changing these will stop the code from working.
 ![image](https://github.com/user-attachments/assets/5e4241e0-46c5-4ddc-90f6-bd3f489cf3da)
 
@@ -45,4 +47,9 @@ to test if the cube moves left and right, press the play button at thte top of t
 if it does not, make sure to double check the inspector and the code for any erros or spelling mistakes.
 
 once the cube is able to move, we can then work on getting the coins to dissapear when the cube interacts with it because currently, you should be able to see the cube go through the coins and not do anything.
-if anything strage is happening 
+if anything strage is happening, try going through the code again to make sure things work.
+
+next, we need to give the cube a rigid body so it can interact with the coins. for this example, you will most likely want to disable "Use Gravity" as it may cause the cube to be influenced by fricttion as it moves along the plane.
+![image](https://github.com/user-attachments/assets/e23a9307-6b20-4ff5-9b0f-4686a5964686)
+
+to test if the rigidbody is working, you can press play on the scene and move the cube into the coins. if it colides with them and doesn't go through, the rigidbody is working and we can move onto 
