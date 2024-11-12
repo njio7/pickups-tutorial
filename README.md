@@ -81,7 +81,7 @@ After this we are now able to make the coin vanish if we use:
 
 ![image](https://github.com/user-attachments/assets/3a075668-3828-4467-926b-ea3fe2a21af9)
 
-Which simply destroys the coin from the scene and provides the visual confirmation of collecting the coin. "destroy" meaning it get's deleted from the scene entirely.
+Which simply destroys the coin from the scene and provides the visual confirmation of collecting the coin. "Destroy" meaning it get's deleted from the scene entirely.
 
 
 
