@@ -7,7 +7,10 @@ Make sure to rename the cylinder to "coin" so it's easier to identify in the hie
 Make the cylinder flat enough to resemble a coin shape and rotate it 90 degrees on the X axis.
 
 You can choose to either use the capsule collider provided with the cylinder or delete the capsule collider and create a sphere collider under "Add Component".
+For my demonstration, i will be deleting the capsule collider and replacing it with a sphere collider as it better fits the shape of the coin.
+
 To make sure the collider for the coin isn't too big, you can turn the size of it down to 0.5. Also make sure that the "Is Trigger" box is ticked. This lets the "player" interact with the coin and initiate an action.
+
 ![image](https://github.com/user-attachments/assets/fbe10a6d-de7e-40a2-8ab0-846359c1943f)
 
 After properly naming and creating your coin, drag it from the Hierachy (left of your screen) into the Assets folder (bottom of your screen). 
@@ -19,8 +22,10 @@ Doing this creates a "prefab". this allows us to have one version of the coin th
 
 There are now two ways to create more coins in the scene because we have created the "Coin" prefab. You can either drag them from the Asset folder into the Scene or you can use Ctrl+D to duplicate the coin that's already in the Scene and move it around.
 
+Personally, it's easier to drag them into the scene using the coin prefab as it leaves little room for error and mistakes.
+
 ![image](https://github.com/user-attachments/assets/1b16780a-7245-4048-b4d6-4b0d360927a0)
-I will personally have my scene displayed like this, but you can move the coins and cube around however you want to.
+For the demonstration, i will have my scene displayed like this, but you can move the coins and cube around however you want to.
 
 
 
@@ -47,9 +52,11 @@ To test if the cube moves left and right, press the play button at thte top of t
 If it does not, make sure to double check the inspector and the code for any erros or spelling mistakes.
 
 Once the cube is able to move, we can then work on getting the coins to dissapear when the cube interacts with it because currently, you should be able to see the cube go through the coins and not do anything.
-If anything strage is happening, try going through the code again to make sure things work.
+If anything unprompted is happening, try going through the code again to make sure things work.
 
-Next, we need to give the cube a rigid body so it can interact with the coins. For this example, you will most likely want to disable "Use Gravity" as it may cause the cube to be influenced by friction as it moves along the plane.
+Next, we need to give the cube a rigid body so it can interact with the coins. Normally, you can keep this option enabled, but for this example, you will most likely want to disable "Use Gravity" 
+as it may cause the cube to be influenced by friction as it moves along the plane. this can sometimes cause unusual movments and we will most probably want to avoid them in this tutorial.
+
 
 ![image](https://github.com/user-attachments/assets/e23a9307-6b20-4ff5-9b0f-4686a5964686)
 
@@ -85,7 +92,34 @@ Which simply destroys the coin from the scene and provides the visual confirmati
 
 
 
-the last step in the tutorial is to have some way to visually represent the ammount of coins collected. this can be done in unity's debug console while the game is running.
+The last step in the tutorial is to have some way to visually confirm the ammount of coins collected. This can be done in unity's debug console while the game is running.
 
-to do this, we will first 
+to do this, we can first create a C# script called "GameManager". this will be our main code that stores the values and outcomes between interactions.
+
+in our GameManager code, we can input the code bellow:
+
+![image](https://github.com/user-attachments/assets/e06fabf3-c179-4540-a164-635bd811f44d)
+
+this will create a public number value called "coins" that can be changed outside of the script. this value will appear in the console *during* the game's runtime.
+
+![image](https://github.com/user-attachments/assets/41ee8bc1-31be-4486-b374-f2d8451fd085)
+
+
+to test if it works, we can use this code below to make sure that the dev console is actually outputting a value.
+
+![image](https://github.com/user-attachments/assets/e033b152-c849-4523-a9ea-0dda99351312)
+
+"Jump" is being referenced here as the spacebar, meaning that all we have to to do to test the console output is to press the spacebar *while* the unity scene is running.
+
+if the code works correctly, you should be able to press spacebar during the scene's runtime and it will output the number 0.
+
+![image](https://github.com/user-attachments/assets/97a8b7f3-3ab0-43bc-8207-ccda28e63088)
+
+If your console does not display anything then you might need to check that your unity setting are set as default otherwise this wont work.
+Alternativly though, we can double check that this isn't a mistake in unity by actually checking for the player object collision with the coin.
+
+In order to do this 
+
+
+
 
